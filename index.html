@@ -1,0 +1,334 @@
+<!DOCTYPE HTML>
+<html lang="zh" xmlns:wb="http://open.weibo.com/wb">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit">
+
+    <meta name="description" content="面包旅行是一款旅途体验的记录和分享应用。你可以使用面包旅行记录旅途的每一分精彩和感动，珍藏美好的旅行回忆，也可以通过面友们分享的异域风景和不同文化，获得旅行灵感。">
+    <meta name="keywords" content="面包旅行,旅行,出境游,旅游,游记,BreadTrip">
+
+
+
+    <title>面包旅行</title>
+
+    <link rel="icon" type="image/png" href="http://qiniustatic.breadtrip.com/static/img/favicon.png" />
+
+
+    <link rel="stylesheet" href="css/base.css"/>
+
+    <link rel="stylesheet" href="css/index.css"/>
+
+
+    <!--[if lt IE 7]>
+    <script src="http://qiniustatic.breadtrip.com/static/new/js/lib/DD_belatedPNG_0.0.8a-min.js" type="text/javascript" ></script>
+    <script type="text/javascript">
+        DD_belatedPNG.fix(".pngfix,.pngfix:hover,div,div:hover");
+    </script>
+    <![endif]-->
+    <script type="text/javascript">
+        var BT_USER_ID = null;
+        var MAP_URL = "http://ditu.google.cn/maps/api/js?sensor=false&language=zh";
+        var STATIC_URL = "http://qiniustatic.breadtrip.com/static/";
+        var GMAPS_API_DOMAIN = "proxy-test-364552769.ap-southeast-1.elb.amazonaws.com";
+    </script>
+
+    <script>
+
+        (function(){
+            //全局命名空间
+            var bt= {
+                index: {},
+                explore: {},
+                plan_trip: {},
+                gmap: {},
+                misc: {},
+                trip: {},
+                tripUtils: {},
+                reply: {},
+                user: {},
+                user2013: {},
+                account: {},
+                places: {},
+                mobile: {},
+                sns: {},
+                base: {},
+                scrollPanel: {},
+                log: {},
+                module: function(meta) {
+                    meta.builder(bt);
+                    return bt;
+                }
+            };
+
+            if(window.bt) {
+                throw new Error("BreadTrip Javascript library has already loaded!");
+            } else {
+                window.bt = bt;
+            }
+            //数据中心方法
+            var _data = {};
+            bt.context = function (key, value) {
+                var length = arguments.length;
+                if (length > 1) {
+                    _data[key] = value;
+                } else if (length == 1) {
+                    if (typeof key == 'object') {
+                        for (var k in key) {
+                            if (key.hasOwnProperty(k)) {
+                                _data[k] = key[k];
+                            }
+                        }
+                    } else {
+                        return _data[key];
+                    }
+                }
+            };
+        })();
+
+    </script>
+
+
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?39ccc5353de4e1969b414e80e516d5a7";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+
+</head>
+<body class="w-1200" data-csrf="034cb430948c1bb4136c0975fe593777">
+
+
+<div id="content" class="content" data-before="41945924">
+    <div class="hot-trip">
+        <h2>热门游记<a target="_blank" href="/explore/">更多<i class="index-icons-arrow"></i></a></h2>
+        <ul class="trips fn-clear">
+
+            <li>
+                <a href="/trips/2387230031/" target="_blank" class="cover" title="迪拜是堂美术课" style="background-image: url(http://photos.breadtrip.com/covers_2016_09_06_2add09d22c6563fc9836d4b4a5ae0add.jpeg?imageView/2/w/960/);"></a>
+                <a href="/trips/2387230031/" title="迪拜是堂美术课" target="_blank" class="name">
+
+                    迪拜是堂美术课
+
+                </a>
+                <div class="info">
+                    <a href="/u/2387396253/" target="_blank" title="我爱熊猫" class="user"><img src="http://photos.breadtrip.com/avatar_6a_03_6290d737a125d353963990e7cbb0ae2800c1090d.jpg-avatar.m" alt=""></a>
+                    <p class="summary"><span>2016.08.18</span><span>6天</span><span>2866次浏览</span></p>
+                    <p class="loc">阿拉伯联合酋长国,迪拜</p>
+                </div>
+            </li>
+
+            <li>
+                <a href="/trips/2386583591/" target="_blank" class="cover" title="思密达国，?????！" style="background-image: url(http://photos.breadtrip.com/covers_2016_09_06_f88cd3050dadeccd08801decadbfedf1.jpeg?imageView/2/w/960/);"></a>
+                <a href="/trips/2386583591/" title="思密达国，?????！" target="_blank" class="name">
+
+                    思密达国，?????！
+
+                </a>
+                <div class="info">
+                    <a href="/u/2386713470/" target="_blank" title="NADIX_纳迪克斯" class="user"><img src="http://photos.breadtrip.com/avatar_b4_64_429346e828fe9170ffb07abd09b4ffc771e3a5e4.jpg-avatar.m" alt=""></a>
+                    <p class="summary"><span>2015.08.05</span><span>5天</span><span>3038次浏览</span></p>
+                    <p class="loc">韩国,首尔</p>
+                </div>
+            </li>
+
+            <li>
+                <a href="/trips/2387228148/" target="_blank" class="cover" title="探索你所不知道的印尼—日惹和巴厘岛" style="background-image: url(http://photos.breadtrip.com/covers_2016_09_06_279dd9f66294ba0546c17ca9c36b90cc.jpeg?imageView/2/w/960/);"></a>
+                <a href="/trips/2387228148/" title="探索你所不知道的印尼—日惹和巴厘岛" target="_blank" class="name">
+
+                    探索你所不知道的印尼—日惹和巴厘岛
+
+                </a>
+                <div class="info">
+                    <a href="/u/2387931483/" target="_blank" title="yaxiaoya1013" class="user"><img src="http://photos.breadtrip.com/avatar_db_66_1e9f647a7ce815ad735b34d96472e20979fd0e28.jpg-avatar.m" alt=""></a>
+                    <p class="summary"><span>2016.08.15</span><span>11天</span><span>751次浏览</span></p>
+                    <p class="loc">印度尼西亚,巴塘</p>
+                </div>
+            </li>
+
+            <li>
+                <a href="/trips/2387123723/" target="_blank" class="cover" title="印象无锡 随走随拍" style="background-image: url(http://photos.breadtrip.com/covers_2016_09_06_73736f41fce0339250b7f4480d0205c7.jpeg?imageView/2/w/960/);"></a>
+                <a href="/trips/2387123723/" title="印象无锡 随走随拍" target="_blank" class="name">
+
+                    印象无锡 随走随拍
+
+                </a>
+                <div class="info">
+                    <a href="/u/2386562246/" target="_blank" title="眾樂樂卟洳獨樂樂" class="user"><img src="http://photos.breadtrip.com/avatar_7f_14_08ff47f8874f10d0cd028718e23c1afcddf069d4.jpg-avatar.m" alt=""></a>
+                    <p class="summary"><span>2015.02.18</span><span>540天</span><span>1551次浏览</span></p>
+                    <p class="loc">中国,无锡</p>
+                </div>
+            </li>
+
+            <li>
+                <a href="/trips/2387100106/" target="_blank" class="cover" title="北欧之旅第二弹 - 极光冰川冰湖 - 愿如期团聚于冰岛某地方" style="background-image: url(http://photos.breadtrip.com/covers_2016_09_05_32964d66804edce9de181da7482518aa.jpeg?imageView/2/w/960/);"></a>
+                <a href="/trips/2387100106/" title="北欧第二弹 - 极光冰川冰湖 - 愿如期团聚于冰岛某地方????" target="_blank" class="name">
+
+                    北欧第二弹 - 极光冰川冰湖 - 愿如期团聚于冰岛某地方????
+
+                </a>
+                <div class="info">
+                    <a href="/u/2390439549/" target="_blank" title="黄阿Mor" class="user"><img src="http://photos.breadtrip.com/avatar_1e_24_19533af78d7b93d2161fec597dceaf2aec089413.jpg-avatar.m" alt=""></a>
+                    <p class="summary"><span>2015.12.07</span><span>8天</span><span>6471次浏览</span></p>
+                    <p class="loc">冰岛</p>
+                </div>
+            </li>
+
+            <li>
+                <a href="/trips/2387279463/" target="_blank" class="cover" title="慢慢悠悠 这个夏天很台湾" style="background-image: url(http://photos.breadtrip.com/covers_2016_09_05_752dbce807872deaf833d6cc07106989.jpeg?imageView/2/w/960/);"></a>
+                <a href="/trips/2387279463/" title="慢慢悠悠 这个夏天很台湾" target="_blank" class="name">
+
+                    慢慢悠悠 这个夏天很台湾
+
+                </a>
+                <div class="info">
+                    <a href="/u/2387549199/" target="_blank" title="南边海小鸥o" class="user"><img src="http://photos.breadtrip.com/avatar_13_49_5b863d5b38951eb2e01ef0dcded981a64ca72f3c.jpg-avatar.m" alt=""></a>
+                    <p class="summary"><span>2016.07.02</span><span>3天</span><span>2833次浏览</span></p>
+                    <p class="loc">台湾,松山区</p>
+                </div>
+            </li>
+
+            <li>
+                <a href="/trips/2387229347/" target="_blank" class="cover" title="青岛 你好 再一次见面" style="background-image: url(http://photos.breadtrip.com/covers_2016_09_05_23c33f781937944e9f8e2da698ae736e.jpeg?imageView/2/w/960/);"></a>
+                <a href="/trips/2387229347/" title="青岛 你好 再一次见面" target="_blank" class="name">
+
+                    青岛 你好 再一次见面
+
+                </a>
+                <div class="info">
+                    <a href="/u/2388149003/" target="_blank" title="柠檬味复合果汁" class="user"><img src="http://photos.breadtrip.com/avatar_83_ca_6adad3cecfb2af4dd45f590962ba3a3f8d027c08.jpg-avatar.m" alt=""></a>
+                    <p class="summary"><span>2016.08.09</span><span>18天</span><span>5284次浏览</span></p>
+                    <p class="loc">中国,青岛</p>
+                </div>
+            </li>
+
+            <li>
+                <a href="/trips/2387270215/" target="_blank" class="cover" title="【挪威】踏取峡湾????" style="background-image: url(http://photos.breadtrip.com/covers_2016_09_04_f159426b80c7cb201280abf78f4f5916.jpg?imageView/2/w/960/);"></a>
+                <a href="/trips/2387270215/" title="【挪威】踏取峡湾????" target="_blank" class="name">
+
+                    【挪威】踏取峡湾????
+
+                </a>
+                <div class="info">
+                    <a href="/u/2386624852/" target="_blank" title="宣木子" class="user"><img src="http://photos.breadtrip.com/avatar_9a_7c_7c43b1ac73e88a2d35f7cc4c5222646e77ce48c3.jpg-avatar.m" alt=""></a>
+                    <p class="summary"><span>2016.07.17</span><span>17天</span><span>8247次浏览</span></p>
+                    <p class="loc">挪威,罗加兰郡</p>
+                </div>
+            </li>
+
+
+
+            <div class="cb"></div>
+
+        </ul>
+    </div>
+</div>
+
+
+
+<!-- 首页新增推广大图使用 -->
+<div id="header" class="new-index new-header index_v4">
+    <!-- <div id="header" class="new-index new-header index_v2">  -->
+    <div id="features">
+        <div class="navi-wrapper">
+            <div class="navi-bar">
+                <div class="navi-prev"></div>
+                <div class="navi-next"></div>
+            </div>
+        </div>
+        <div class="scrollable">
+            <div class="items">
+                <!-- 
+                    首页新增推广大图
+                    <a id="bg4" class="item bg4 fl" href="/embed/bff/">
+                        <div class="bg"></div>
+                        <div class="text"></div>
+                    </a> 
+                -->
+                <div id="bg2" class="item bg2 fl">
+                    <div class="bg"></div>
+                    <div class="text"></div>
+                    <p class="button"><a class="index-icons-activity" href="###"></a></p>
+                </div>
+                <div id="bg0" class="item bg0 fl">
+                    <div class="bg"></div>
+                    <div class="text"></div>
+                    <p class="button"><a class="index-icons-ios" href="/downloads/"></a><a class="index-icons-android" href="/downloads/"></a></p>
+                </div>
+                <div id="bg1" class="item bg1 fl">
+                    <div class="bg"></div>
+                    <div class="text"></div>
+                    <p class="button"><a class="index-icons-create" href="###"></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="top-nav">
+        <div class="center-align fn-clear">
+            <a href="/" class="logo"></a>
+
+
+            <div class="nav-bar float-left">
+                <a class="explore " href="/explore/">热门游记</a>
+                <a class="destination " href="/destinations/">目的地</a>
+
+                <a class="download" href="/downloads/">下载客户端</a>
+            </div>
+
+            <div id="float-alarm" data-hide="1" class="float-alarm hidden">
+                <a class="notification hidden" href="/notifications/"><span></span>条新消息</a><span class="sep hidden">, </span><a class="message hidden" href="/messages/"><span></span>条新私信</a>
+                <div class="close"></div>
+            </div>
+            <ul class="profile float-right">
+                <li class="search float-left">
+                    <form id="search_form" action="/search/" method="get">
+                        <div class="text-wrapper">
+                            <input class="q" name="q" type="text" placeholder="搜索地点/用户" />
+                        </div>
+                    </form>
+                </li>
+
+                <li class="signin float-left">
+                    <a id="a-signup" class="signup" href="/accounts/signup/">注册</a>
+                    <a id="header-login" class="a-login" href="/accounts/login/">登录</a>
+                    <a title="微信" class="login-sns-wechat wechat-login-btn" data-sns-type="wechat" data-url="/accounts/wechat_login/" href="/accounts/wechat_login/">微信</a>
+                    <a title="新浪微博" class="login-sns-weibo sina-login-btn" data-sns-type="sina" data-url="/accounts/sina_2_login/" href="/accounts/sina_2_login/">微博</a>
+                    <a class="login-sns-qq qq-login-btn" data-sns-type="qq" data-url="/accounts/qq_login/" href="/accounts/qq_login/">QQ</a>
+                    <a class="login-sns-tencent tencent-login-btn" data-sns-type="tencent" data-url="/accounts/tencent_login/" href="/accounts/tencent_login/">腾讯微博</a>
+                    <!-- <a class="login-sns-renren renren-login-btn" data-sns-type="renren" data-url="/accounts/renren_login/" href="/accounts/renren_login/">人人网</a> -->
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="feature-search">
+        <div class="search-wrapper">
+            <form action="/search/" class="search_input" method="get">
+                <div class="text-wrapper">
+                    <div class="text-bg">
+                        <h3><input class="keyword" type="text" name="q" value="" placeholder="想去哪里旅行"/></h3>
+                        <a href="###" id="btn-search" class="btn-search index-icons-search"></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div id="overlay" class="hidden"></div>
+
+</body>
+
+<script src="js/base.js"></script>
+
+
+<script src="js/index_main.js"></script>
+
+</html>
